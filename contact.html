@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contacts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0Hhonpy0DGzjMWIsNXUiCAmbcDY4yVrmdJAaqYteWW9ejMiZfj/rapidly" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #ff91a4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: white;
+            padding: 5px 30px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            font-family: 'Raleway', sans-serif;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: larger;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .contact-section {
+            color: white;
+            padding: 160px 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+            flex: 1;
+        }
+
+        .contact-info {
+            max-width: 50%;
+        }
+
+        .contact-info h2 {
+            color: black;
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: white;
+        }
+
+        .contact-info b {
+            color: black;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none; 
+        }
+
+        .quote {
+            max-width: 45%;
+            text-align: right;
+            font-size: 70px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .quote span {
+            font-size: 16px;
+            font-weight: 400;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .profile-box {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-box img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-box span {
+            font-weight: bold;
+            color: #711f1f;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        footer {
+            text-align: center;
+            background: #ff91a4;
+            color: black;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-info,
+            .quote {
+                max-width: 100%;
+                text-align: left;
+            }
+
+            .quote {
+                margin-top: 30px;
+            }
+
+            .profile-box {
+                top: 10px;
+                right: 10px;
+                transform: scale(0.9);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html" id="home">HOME</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACTS</a></li>
+        </ul>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo" />
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="profile-box">
+            <img src="https://i.postimg.cc/1tv6NbVK/photo-6140658191160164298-y-removebg-preview.png" alt="Profile" />
+            <span>beibeia</span>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Details:</h2>
+            <p>09649483218</p>
+            <p><a href="mailto:beatrizamigable07@gmail.com" style="color: white; text-decoration: none;">beatrizamigable07@gmail.com</a></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/beatriz.amigable" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook">facebook</i>
+                </a>
+                <a href="https://www.instagram.com/beibeiaaa_/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram">instagram</i>
+                </a>
+                </div>
+        </div>
+
+        <div class="quote">
+            “AS LONG AS I LIVE, THERE ARE INFINITE CHANCES!”
+            <span>— Monkey D. Luffy</span>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Bea. All rights reserved.
+    </footer>
+
+</body>
+</html>

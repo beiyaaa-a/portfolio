@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* HEADER - Same as About */
+        body {
+            font-family: 'Quicksand', 'Poppins', sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: #ff91a4;
+            padding: 5px 30px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            transition: background-color 0.3s ease; 
+        }
+
+        header.navbar:hover {
+            background-color: #f07189; 
+        }
+
+       
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            font-family: 'Raleway', sans-serif;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: larger;
+            transition: color 0.3s ease, transform 0.3s ease; 
+        }
+
+        .nav-links a:hover {
+            color: white;
+            transform: scale(1.05); 
+        }
+
+       
+        .logo img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            transition: transform 0.5s ease-in-out; 
+        }
+
+        .logo img:hover {
+            transform: rotate(360deg) scale(1.1);
+        }
+
+       
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 140px 40px 40px 40px;
+            background-color: white;
+            max-width: 95%;
+            margin: 0 auto;
+            border-radius: 5px;
+            flex: 1;
+            opacity: 0; 
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards 0.3s; 
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        
+        h1 {
+            color: black;
+            text-align: center;
+            font-size: 90px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 100;
+            transition: color 0.3s ease; 
+        }
+
+        h1:hover {
+            color: #333; 
+        }
+
+        h3 {
+            color: #ff91a4;
+            text-align: left;
+            font-size: 40px;
+            font-family: 'Quicksand', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        h3:hover {
+            color: #e67a8f; 
+        }
+
+        .text {
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .image {
+            animation: slideInRight 1s ease-out; 
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                padding-top: 100px;
+            }
+
+            .image img {
+                width: 200px;
+            }
+
+            h1 {
+                font-size: 60px;
+            }
+
+            h3 {
+                font-size: 30px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            background: #ff91a4;
+            color: black;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: auto;
+            width: 100%;
+            transition: background-color 0.3s ease; 
+        }
+
+        footer:hover {
+            background-color: #f07189; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html" id="home">HOME</a></li>
+            <li><a href="profile.html" id="prof">PROFILE</a></li>
+            <li><a href="portfolio.html" id="port">PORTFOLIO</a></li>
+            <li><a href="about.html" id="abt">ABOUT</a></li>
+            <li><a href="contact.html" id="cont">CONTACTS</a></li>
+        </ul>
+        <div class="logo">
+            <img src="img/logo.png" alt="Bea" />
+        </div>
+    </header>
+
+    <section id="home" class="main-content">
+        <div class="text">
+            <h1>Hi, I'm Bea!</h1>
+            <h3>
+                I’m an aspiring artist exploring color, code, and creativity.
+                This is my little journal of experiments, inspirations, and things I’m learning along the way.
+                Welcome to my messy, magical space
+            </h3>
+        </div>
+        <div class="image">
+            <img src="https://i.pinimg.com/474x/ae/44/25/ae44251838fb07a41608e200388df49e.jpg" alt="photo of Bea">
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Bea. All rights reserved.
+    </footer>
+
+</body>
+
+</html>

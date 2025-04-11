@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display-swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display-swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display-swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: #ff91a4;
+            padding: 5px 30px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            transition: background-color 0.3s ease; 
+        }
+
+        header.navbar:hover {
+            background-color: #f07189; 
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            font-family: 'Raleway', sans-serif;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: larger;
+            transition: color 0.3s ease, transform 0.3s ease; 
+        }
+
+        .nav-links a:hover {
+            color: white;
+            transform: scale(1.05); 
+        }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            transition: transform 0.5s ease-in-out; 
+        }
+
+        .logo img:hover {
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 40px 40px 40px;
+            gap: 40px;
+            flex-wrap: wrap;
+            flex: 1;
+            opacity: 0; 
+            transform: translateY(20px); 
+            animation: fadeIn 1s forwards 0.3s; 
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about-sec .text {
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+        }
+
+        .about-sec .image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .about-sec .image img {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .about-sec h1 {
+            font-family: 'Poppins', sans-serif;
+            color: #ff91a4;
+            font-size: 75px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: left;
+            transition: color 0.3s ease; 
+        }
+
+        .about-sec h1:hover {
+            color: #e67a8f; 
+        }
+
+        .about-sec p {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 400;
+            color: #ff91a4;
+            font-size: 28px;
+            text-align: left;
+            transition: color 0.3s ease;
+        }
+
+        .about-sec p:hover {
+            color: #e67a8f;
+        }
+
+        .text {
+            animation: slideInLeft 1s ease-out; 
+        }
+
+        .image {
+            animation: slideInRight 1s ease-out; 
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .links-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        .links-container a {
+            display: inline-flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #ff91a4;
+            text-decoration: none;
+            color: black;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            border-radius: 10px;
+            margin: 10px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .links-container a:hover {
+            transform: scale(0.95);
+            opacity: 0.7;
+        }
+
+        .links-container a img {
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+        }
+
+        .links-container a span {
+            display: block;
+            margin-top: 5px;
+            font-weight: 400;
+            font-size: 0.8em;
+        }
+
+        footer {
+            text-align: center;
+            background: #ff91a4;
+            color: black;
+            padding: 20px;
+            font-size: 14px;
+            width: 100%;
+            margin-top: auto;
+            transition: background-color 0.3s ease; 
+        }
+
+        footer:hover {
+            background-color: #f07189; 
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html" id="home">HOME</a></li>
+            <li><a href="profile.html" id="prof">PROFILE</a></li>
+            <li><a href="portfolio.html" id="port">PORTFOLIO</a></li>
+            <li><a href="about.html" id="abt">ABOUT</a></li>
+            <li><a href="contact.html" id="cont">CONTACTS</a></li>
+        </ul>
+        <div class="logo">
+            <img src="img/logo.png" alt="Bea" width="250" style="border-radius: 50%;" />
+        </div>
+    </header>
+
+    <section class="about-sec">
+        <div class="about-content">
+            <div class="text">
+                <h1>About me</h1>
+                <p>Hi, I'm Bea Aurelle T. Amigable, and I'm just starting my journey in web development and web designing. I'm eager to learn, create, and grow in this field. This website is my space to explore and showcase my progress!</p>
+            </div>
+            <div class="image">
+                <img src="https://i.pinimg.com/474x/50/fc/8f/50fc8f912b403b71a7cabcc729204b88.jpg" alt="photo of Bea">
+            </div>
+        </div>
+
+        <div class="links-container">
+            <a href="#">
+                <img src="https://i.pinimg.com/736x/60/d9/5c/60d95c21ad14175e6e031e9699f04910.jpg" alt="Learning Icon">
+                I'm Actively Learning
+                <span>I'm actively learning and expanding my knowledge in web technologies.</span>
+            </a>
+            <a href="#">
+                <img src="https://i.pinimg.com/736x/89/13/0a/89130aa08181bf8d91a4a36571c1ecb6.jpg" alt="Inspiration Icon">
+                My Inspiration
+                <span>I find inspiration in both the logic of code and the freedom of drawing.</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Bea. All rights reserved.
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: #ff91a4;
+            padding: 5px 30px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            font-family: 'Raleway', sans-serif;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: larger;
+            transition: color 0.3s ease; 
+        }
+
+        .nav-links a:hover {
+            color: white; 
+        }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        /* MAIN LAYOUT */
+        .profile-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 100px 20px 40px 20px;
+            gap: 30px;
+            background-image: url('https://i.postimg.cc/g26J6t0m/subtle-pattern.png');
+            background-attachment: fixed;
+            background-size: cover;
+            flex: 1;
+        }
+
+        .profile-card {
+            background-color: #ff91a4;
+            padding: 30px 20px;
+            border-radius: 40px;
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, background-color 0.3s ease-in-out;
+            background-size: 200% 200%;
+            background-position: 0% 100%;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            background-color: #ff91a4;
+            background-position: 100% 0%;
+        }
+
+        .profile-card img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 15px;
+        }
+
+        .profile-card h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            font-family: 'quicksand', sans-serif;
+            font-weight: 900;
+        }
+
+        .profile-card p {
+            font-size: 16px;
+            margin: 5px 0;
+            font-family: 'quicksand', sans-serif;
+            font-weight: 900;
+        }
+
+        .bio {
+            background-color: #ff91a4;
+            padding: 30px;
+            border-radius: 60px;
+            color: white;
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+            opacity: 0.95;
+            transform-origin: center top;
+            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background-color 0.3s ease-in-out;
+            background-size: 200% 200%;
+            background-position: 100% 100%;
+        }
+
+        .bio p {
+            font-family: 'quicksand', sans-serif;
+            font-weight: 900;
+        }
+
+        .bio:hover {
+            transform: perspective(600px) rotateX(5deg) translateY(-5px) scale(1.02);
+            opacity: 1;
+            box-shadow: 0 12px 18px rgba(0, 0, 0, 0.25);
+            background-color: #ffb3c1;
+            background-position: 0% 0%;
+        }
+
+        .grid-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .card {
+            background-color: #ff91a4;
+            padding: 25px;
+            border-radius: 40px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            opacity: 0.9;
+            background-size: 200% 200%;
+            background-position: 0% 0%;
+        }
+
+        .card:hover {
+            transform: rotateY(20deg) scale(1.05);
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+            opacity: 1;
+            background-color: #ffb3c1;
+            background-position: 100% 100%;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .card ul li {
+            margin-bottom: 6px;
+            font-family: 'quicksand', sans-serif;
+            font-weight: 900;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 20px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .nav-links li a {
+                font-size: 16px;
+            }
+
+            .logo img {
+                width: 150px;
+            }
+
+            .profile-card:hover {
+                transform: scale(1.01);
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+                background-position: 100% 0%;
+            }
+
+            .bio:hover {
+                transform: translateY(-3px) scale(1.01);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+                background-position: 0% 0%;
+            }
+
+            .card:hover {
+                transform: translateY(-5px) scale(1.02);
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                background-position: 100% 100%;
+            }
+        }
+
+        footer {
+            text-align: center;
+            background: #ff91a4;
+            color: black;
+            padding: 20px;
+            font-size: 14px;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html" id="home">HOME</a></li>
+            <li><a href="profile.html" id="prof">PROFILE</a></li>
+            <li><a href="portfolio.html" id="port">PORTFOLIO</a></li>
+            <li><a href="about.html" id="abt">ABOUT</a></li>
+            <li><a href="contact.html" id="cont">CONTACTS</a></li>
+        </ul>
+        <div class="logo">
+            <img src="img/logo.png" alt="Bea" width="200" style="border-radius: 50%;" />
+        </div>
+    </header>
+
+    <div class="profile-wrapper">
+        <div class="profile-card">
+            <img src="https://i.pinimg.com/474x/ae/44/25/ae44251838fb07a41608e200388df49e.jpg" alt="Bea's photo" />
+            <h2>Bea Aurelle Amigable</h2>
+            <p>IT Student</p>
+            <p><strong>Age:</strong> 19 years old</p>
+            <p><strong>Location:</strong> Quezon City</p>
+        </div>
+
+        <div class="bio">
+            <h3>BIO</h3>
+            <p>
+                Hello! I'm Bea, a newbie diving into the exciting world where coding meets creative expression.
+                This is my space to document my learning journey, showcase aesthetic experiments in code, and
+                occasionally share the doodles and drawings that capture my mood. Expect a mix of digital
+                adventures and the tangible joy of art!
+            </p>
+        </div>
+
+        <div class="grid-section">
+            <div class="card">
+                <h3>SKILLS</h3>
+                <ul>
+                    <li>HTML/CSS Basics</li>
+                    <li>Aesthetic Experimentation</li>
+                    <li>Mixed Media Exploration</li>
+                    <li>Problem-Solving</li>
+                    <li>Creative Communication</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>EDUCATION & CERTIFICATIONS</h3>
+                <ul>
+                    <li>Consistent Honor Student (Grade 7-10)</li>
+                    <li>Graduated with Honors – Junior High (2022)</li>
+                    <li>With Honor – Grade 11, 1st Semester (2023)</li>
+                    <li>Graduated with High Honors – Grade 12 (2024)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Bea. All rights reserved.
+    </footer>
+</body>
+
+</html>
